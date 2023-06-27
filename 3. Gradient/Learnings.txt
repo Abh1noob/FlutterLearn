@@ -1,0 +1,4 @@
+1. Correctly using 'child' and understanding the parameters of a keyword.
+2. Adding Gradient --> Linear and Radial.
+3. without using 'Center', color wont be spread throughout the space. It will be limited to space occupied by content
+4. Using 'Decoration' nicely
