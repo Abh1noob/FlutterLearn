@@ -1,0 +1,4 @@
+1. cmd+shift+p --> Flutter Format Document.
+2. Nesting Widgets.
+3. About Scaffold --> explored it a bit.
+4. refactor to wrap 
