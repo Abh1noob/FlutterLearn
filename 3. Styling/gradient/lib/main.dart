@@ -5,7 +5,18 @@ void main() {
     MaterialApp(
       home: Scaffold(
         appBar: Tab(
-          child: Container(
+          child: AppbarGradient(),
+        ),
+        body: BgGradient(),
+      ),
+    ),
+  );
+}
+
+class AppbarGradient extends StatelessWidget{
+  @override
+  Widget build(context){
+    return Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [
                 Color.fromARGB(255, 255, 0, 0),
@@ -18,9 +29,14 @@ void main() {
                 selectionColor: Colors.amber,
               ),
             ),
-          ),
-        ),
-        body: Container(
+          );
+  }
+}
+
+class BgGradient extends StatelessWidget{
+  @override
+  Widget build(context){
+    return Container(
           decoration: const BoxDecoration(
             gradient: RadialGradient(radius: 1.3, colors: [
               Color.fromARGB(255, 0, 136, 255),
@@ -37,8 +53,6 @@ void main() {
                 ),
             ),
           ),
-        ),
-      ),
-    ),
-  );
+        );
+  }
 }
