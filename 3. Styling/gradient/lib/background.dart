@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:widget_tree/text.dart';
+// import 'package:widget_tree/text.dart';
 
 class BgGradient extends StatelessWidget{
   @override
@@ -11,8 +11,8 @@ class BgGradient extends StatelessWidget{
               Color.fromARGB(255, 38, 0, 255),
             ]),
           ),
-          child:  Center(
-            child: text(),
+          child: Center(
+            child: Image.asset('assets/peter.png'),
           ),
         );
   }
