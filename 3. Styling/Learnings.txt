@@ -7,3 +7,4 @@
 7. Creating Classes and hence custom widgets
 8. Creating Different Dart Files and integrating them into one particular file.
 9. Learnt to use variables and pass it as a parameter in constructor.
+10. Learnt to add images to flutter project -> indentation matters in pubspec.yaml (created issue for me when it was incorrect).
