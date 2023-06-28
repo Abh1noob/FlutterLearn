@@ -6,13 +6,14 @@ class text extends StatelessWidget {
   @override
   Widget build(context) {
     return Container(
-      color: Colors.blue,
+      // color: Colors.blue,
       child: Text(
+        textAlign: TextAlign.left,
         inptext,
         style: const TextStyle(
-          fontSize: 100,
-          color: Colors.white,
-          backgroundColor: Color.fromARGB(255, 0, 0, 0),
+          fontWeight: FontWeight.bold,
+          fontSize: 50,
+          color: Color.fromARGB(255, 255, 255, 255),
         ),
       ),
     );

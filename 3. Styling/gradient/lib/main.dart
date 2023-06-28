@@ -4,7 +4,7 @@ import 'package:widget_tree/appbar.dart';
 
 void main() {
   runApp(
-    MaterialApp(
+    const MaterialApp(
       home: Scaffold(
         appBar: Tab(
           child: AppbarGradient(),

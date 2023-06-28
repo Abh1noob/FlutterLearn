@@ -9,8 +9,8 @@ class AppbarGradient extends StatelessWidget{
     return Container(
             decoration: const BoxDecoration(
               gradient: LinearGradient(colors: [
-                Color.fromARGB(255, 255, 0, 0),
-                Color.fromARGB(255, 221, 129, 0),
+                Color.fromARGB(255, 3, 1, 19),
+                Color.fromARGB(255, 0, 136, 255),
               ]),
             ),
             child: const Center(
