@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-
+import 'package:widget_tree/text.dart';
 
 class BgGradient extends StatelessWidget{
   @override
@@ -11,15 +11,8 @@ class BgGradient extends StatelessWidget{
               Color.fromARGB(255, 38, 0, 255),
             ]),
           ),
-          child: const Center(
-            child: Text(
-              'Abhinav',
-              style: TextStyle(
-                fontSize: 100,
-                color: Colors.white,
-                backgroundColor: Color.fromARGB(255, 0, 0, 0),
-                ),
-            ),
+          child:  Center(
+            child: text(),
           ),
         );
   }
