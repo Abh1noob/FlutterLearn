@@ -10,10 +10,10 @@ class BgGraphics extends StatelessWidget {
       decoration: const BoxDecoration(
         gradient: LinearGradient(
           begin: Alignment.topRight,
-          end: Alignment.topLeft,
+          end: Alignment.bottomLeft,
           colors: [
-            Color.fromRGBO(10, 77, 104, 1),
-            Color.fromRGBO(5, 191, 219, 1),
+            Color.fromRGBO(3, 169, 234, 1),
+            Color.fromRGBO(236, 240, 240, 1),
             // Color.fromRGBO(12, 19, 79, 1),
           ],
         ),
