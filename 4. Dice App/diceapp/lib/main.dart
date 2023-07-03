@@ -3,10 +3,6 @@ import 'package:diceapp/background.dart';
 
 void main() {
   runApp(
-     const MaterialApp(
-      home: Scaffold(
-        body:  BgGraphics(),
-        ),
-      ),
+      const MaterialApp(home: BgGraphics(),debugShowCheckedModeBanner: false),
   );
 }

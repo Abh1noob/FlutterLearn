@@ -23,9 +23,9 @@ class BgGradient extends StatelessWidget {
                 height: 200,
               ),
               const SizedBox(width: 20),
-              const Column(
+                const Column(
                 children: [
-                  text('Abhinav'),
+                  TextT('Abhinav'),
                   SizedBox(height: 10),
                   Text('''Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
 Sed vel elit ornare quam sollicitudin sollicitudin. Vivamus nec neque non massa 

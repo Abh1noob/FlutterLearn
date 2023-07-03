@@ -39,6 +39,12 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  image_path: "assets/dice-fire.png"
+  andorid: true
+  ios: true
 
   # The "flutter_lints" package below contains a set of recommended lints to
   # encourage good coding practices. The lint set provided by the package is
@@ -60,13 +66,27 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-    - assets/dice-1.png
-    - assets/dice-2.png
-    - assets/dice-3.png
-    - assets/dice-4.png
-    - assets/dice-5.png
-    - assets/dice-6.png
-    - assets/dice-logo.png
+    - assets/dice-blue-1.png
+    - assets/dice-blue-2.png
+    - assets/dice-blue-3.png
+    - assets/dice-blue-4.png
+    - assets/dice-blue-5.png
+    - assets/dice-blue-6.png
+
+    - assets/dice-red-1.png
+    - assets/dice-red-2.png
+    - assets/dice-red-3.png
+    - assets/dice-red-4.png
+    - assets/dice-red-5.png
+    - assets/dice-red-6.png
+
+    - assets/dice-green-1.png
+    - assets/dice-green-2.png
+    - assets/dice-green-3.png
+    - assets/dice-green-4.png
+    - assets/dice-green-5.png
+    - assets/dice-green-6.png
+
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
