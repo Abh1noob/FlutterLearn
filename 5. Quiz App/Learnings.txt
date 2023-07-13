@@ -1,0 +1,7 @@
+1. Learned to create Custom Widgets and Implement is Nicely.
+2. Learned to Access Private Function of statelesswidgets in another dart file.
+3. Learned Concept of List.
+4. Learned Concept of Map Function.
+5. Learned (...), It is to remove each iterated item into separate individual components.
+6. Learned to Transition Between 2 different screens.
+7. 
