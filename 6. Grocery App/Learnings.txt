@@ -1,0 +1,2 @@
+1. Learned bloC Structure
+2. Learned little of clean architecture
