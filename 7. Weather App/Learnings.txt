@@ -1,0 +1,8 @@
+Learnings:
+1. Creating Splash Screen
+2. Extending body behind appbar
+3. HTTP Requests
+4. Implementation of .env in flutter
+5. Using Google fonts
+6. BLoC concept became more clearer
+7. Layouting skills improvised 
