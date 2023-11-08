@@ -4,6 +4,7 @@ class WeatherWidgets {
   Container cloudy = Container(
     padding: const EdgeInsets.fromLTRB(10, 20, 25, 10),
     // color: Colors.black,
+
     height: 200,
     width: 200,
     child: ClipOval(

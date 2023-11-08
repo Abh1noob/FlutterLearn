@@ -13,3 +13,5 @@ final class GetRequestState extends HomeState {
 }
 
 final class LoadingState extends HomeState{}
+
+final class FetchingError extends HomeActionState{}

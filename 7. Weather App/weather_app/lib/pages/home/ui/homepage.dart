@@ -17,17 +17,19 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  List<String> recent_city = ["thane"];
   final cityInput = TextEditingController();
 
   @override
   void initState() {
     super.initState();
-    homeBloc.add(GetRequestFetchEvent("thane"));
+    homeBloc.add(GetRequestFetchEvent(recent_city[0]));
   }
 
   final HomeBloc homeBloc = HomeBloc();
   @override
   Widget build(BuildContext context) {
+    String hinttext = "Search for your city...";
     return Scaffold(
       extendBodyBehindAppBar: true,
       drawer: Drawer(
@@ -46,7 +48,16 @@ class _HomePageState extends State<HomePage> {
         bloc: homeBloc,
         listenWhen: (previous, current) => current is HomeActionState,
         buildWhen: (previous, current) => current is! HomeActionState,
-        listener: (context, state) {},
+        listener: (context, state) {
+          if (state is FetchingError) {
+            ScaffoldMessenger.of(context).showSnackBar(const SnackBar(
+              content: Text('City name does not exist'),
+              duration: Duration(milliseconds: 2000),
+            ));
+            homeBloc
+                .add(GetRequestFetchEvent(recent_city[recent_city.length - 2]));
+          }
+        },
         builder: (context, state) {
           switch (state.runtimeType) {
             case LoadingState:
@@ -85,11 +96,13 @@ class _HomePageState extends State<HomePage> {
                                   width:
                                       MediaQuery.of(context).size.width * 0.8,
                                   child: TextField(
-                                    style: CustomText().primaryFont.copyWith(fontSize: 20),
+                                    style: CustomText()
+                                        .primaryFont
+                                        .copyWith(fontSize: 20),
                                     controller: cityInput,
                                     decoration: InputDecoration(
                                       focusColor: CustomColors().color1,
-                                      hintText: "Search for your city...",
+                                      hintText: hinttext,
                                       hintStyle: TextStyle(
                                           color: CustomColors().color2),
                                       focusedBorder: const OutlineInputBorder(
@@ -116,7 +129,9 @@ class _HomePageState extends State<HomePage> {
                                   ),
                                   child: IconButton(
                                       onPressed: () {
-                                        homeBloc.add(GetRequestFetchEvent(cityInput.text));
+                                        recent_city.add(cityInput.text);
+                                        homeBloc
+                                            .add(GetRequestFetchEvent(recent_city[recent_city.length - 1]));
                                       },
                                       icon: const Icon(Icons.send_rounded)),
                                 )
@@ -128,7 +143,8 @@ class _HomePageState extends State<HomePage> {
                             Padding(
                               padding: const EdgeInsets.all(8.0),
                               child: Container(
-                                padding: EdgeInsets.fromLTRB(10, 50, 10, 50),
+                                padding:
+                                    const EdgeInsets.fromLTRB(10, 50, 10, 50),
                                 decoration: BoxDecoration(
                                     boxShadow: [
                                       BoxShadow(

@@ -1,6 +1,4 @@
 import 'dart:async';
-import 'dart:isolate';
-
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';
 import 'package:weather_app/pages/home/requests/getweather.dart';
@@ -16,7 +14,12 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
   FutureOr<void> getRequestFetchEvent(
       GetRequestFetchEvent event, Emitter<HomeState> emit) async {
     emit(LoadingState());
-    Weather temp = await getWeather(event.city);
-    emit(GetRequestState(weatherData: temp));
+    try {
+      Weather temp = await getWeather(event.city);
+      emit(GetRequestState(weatherData: temp));
+    } catch (e) {
+      emit(FetchingError());
+      print(e);
+    }
   }
 }
